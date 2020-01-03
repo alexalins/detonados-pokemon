@@ -9,9 +9,11 @@ class RunsableCard extends StatelessWidget {
   Card build(BuildContext context) {
     return  Card(
       child:Container(
-        margin: EdgeInsets.all(15.0),
+        margin: EdgeInsets.all(4.0),
         decoration: BoxDecoration(
-            color: color, borderRadius: BorderRadius.circular(10.0)),
+            color: color, borderRadius: BorderRadius.circular(10.0)
+        ),
+        child: new  Image(image: AssetImage('image/pokeball.png')),
       ),
     );
   }

@@ -13,20 +13,26 @@ class _ListPageState extends State<ListPage> {
   @override
   void initState() {
     super.initState();
-    _data = [ 0, 1, 2, 3];
+    _data = [ 0, 1, 2, 3, 4];
     print(_data.length);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(16.0),
       child: new Column(
         children: <Widget>[
           Expanded(
             child: new ListView.builder(
-              itemCount: _data.length,
+              itemCount: (_data.length/2).round(),
               itemBuilder: (BuildContext context , int index){
-                return RunsableCard(color: Color(COLOR_CARD));
+                return Row(
+                  children: <Widget>[
+                    Expanded(child:  RunsableCard(color: Color(COLOR_CARD))),
+                    Expanded(child:  RunsableCard(color: Color(COLOR_CARD)))
+                  ],
+                );
               },
             )
           ),
