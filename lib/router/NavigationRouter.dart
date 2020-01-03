@@ -3,10 +3,8 @@ import 'package:detonados/pages/SplashPage.dart';
 import 'package:flutter/material.dart';
 
 class NavigationRouter {
+
   static Route<dynamic> gerarRotas(RouteSettings settings){
-
-    final args = settings.arguments;
-
     switch (settings.name) {
       case "/":
         return MaterialPageRoute(

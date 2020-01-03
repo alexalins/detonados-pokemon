@@ -1,1 +1,1 @@
-const APP_NAME = "Detonados";
+const APP_NAME = "Detonados Pokémon";
