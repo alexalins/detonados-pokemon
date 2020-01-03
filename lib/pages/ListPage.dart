@@ -1,6 +1,7 @@
-import 'package:detonados/components/AppBar.dart';
 import 'package:detonados/components/RunsableCard.dart';
+import 'package:detonados/models/Detonado.dart';
 import 'package:detonados/util/Constants.dart';
+import 'package:detonados/util/mock/MockDetonados.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatefulWidget {
@@ -9,11 +10,12 @@ class ListPage extends StatefulWidget {
 }
 
 class _ListPageState extends State<ListPage> {
-  List<int> _data;
+  List<Detonado> _data;
   @override
   void initState() {
     super.initState();
-    _data = [ 0, 1, 2, 3, 4];
+    MockDetonados mockDetonados = new MockDetonados();
+    _data = mockDetonados.detonados;
     print(_data.length);
   }
 
@@ -21,23 +23,13 @@ class _ListPageState extends State<ListPage> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(16.0),
-      child: new Column(
-        children: <Widget>[
-          Expanded(
-            child: new ListView.builder(
-              itemCount: (_data.length/2).round(),
-              itemBuilder: (BuildContext context , int index){
-                return Row(
-                  children: <Widget>[
-                    Expanded(child:  RunsableCard(color: Color(COLOR_CARD))),
-                    Expanded(child:  RunsableCard(color: Color(COLOR_CARD)))
-                  ],
-                );
-              },
-            )
-          ),
-        ],
-      ),
+      child: GridView.count(
+          crossAxisCount: 2,
+          children: List.generate(_data.length, (index){
+            return  RunsableCard(color: Color(COLOR_CARD), detonado: _data[index]);
+          },
+        )
+      )
     );
   }
 }
