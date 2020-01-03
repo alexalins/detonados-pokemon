@@ -1,3 +1,5 @@
+import 'package:detonados/components/AppBar.dart';
+import 'package:detonados/components/BottomBar.dart';
 import 'package:flutter/material.dart';
 
 class InfoPage extends StatefulWidget {
@@ -6,12 +8,13 @@ class InfoPage extends StatefulWidget {
 }
 
 class _InfoPageState extends State<InfoPage> {
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: new Text("INFO"),
-      ),
+    return Center(
+      child: new Text("INFO"),
     );
   }
 }

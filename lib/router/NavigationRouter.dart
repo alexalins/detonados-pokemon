@@ -1,5 +1,6 @@
 import 'package:detonados/pages/HomePage.dart';
 import 'package:detonados/pages/InfoPage.dart';
+import 'package:detonados/pages/ListPage.dart';
 import 'package:detonados/pages/SplashPage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,10 @@ class NavigationRouter {
       case "/home":
         return MaterialPageRoute(
             builder: (_) => HomePage()
+        );
+      case "/list":
+        return MaterialPageRoute(
+            builder: (_) => ListPage()
         );
       case "/info":
         return MaterialPageRoute(

@@ -1,6 +1,9 @@
 import 'package:detonados/components/AppBar.dart';
 import 'package:detonados/components/BottomBar.dart';
 import 'package:detonados/components/RunsableCard.dart';
+import 'package:detonados/pages/InfoPage.dart';
+import 'package:detonados/pages/ListPage.dart';
+import 'package:detonados/util/Constants.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,27 +12,36 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  //BARRA DE NAVEGACAO
-  BottomBar _myBottomBar = new BottomBar();
 
+  List<BottomNavigationBarItem> _items;
+  int _pagSelect = 0;
+  final _page = [
+    ListPage(),
+    InfoPage()
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+    //CRIANDO LISTA DE ITENS PARA A NAVEGACAO
+    _items = new List();
+    _items.add(new BottomNavigationBarItem(icon: new Icon(Icons.featured_play_list), title: new Text('Lista')));
+    _items.add(new BottomNavigationBarItem(icon: new Icon(Icons.info), title: new Text('Info')));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(child: RunsableCard(color: Color(0xFF1D1E33))),
-                Expanded(child: RunsableCard(color: Color(0xFF1D1E33))),
-              ],
-            ),
-          )
-        ],
-        ),
-      //CHAMANDO COMPONENTE DA BARRA
-      bottomNavigationBar: _myBottomBar,
+      appBar: AppBar(title: Text(APP_NAME), centerTitle: true ),
+      body: _page[_pagSelect],
+      bottomNavigationBar: new  BottomNavigationBar(
+        items: _items,
+        fixedColor: Colors.white,
+        onTap: (int item){
+          setState(() {
+              _pagSelect = item;
+          });
+        }
+      )
     );
   }
 }

@@ -23,7 +23,18 @@ class _BottomBarState extends State<BottomBar> {
     //RETORNANDO A BARRA DE NAVEGACAO
     return new BottomNavigationBar(
         items: _items,
-        fixedColor: Colors.white
+        fixedColor: Colors.white,
+        onTap: (int item){
+          switch(item) {
+            case 0:
+              Navigator.pushReplacementNamed(context, '/home');
+              break;
+
+            case 1:
+              Navigator.pushReplacementNamed(context, '/info');
+              break;
+          }
+        },
     );
   }
 
