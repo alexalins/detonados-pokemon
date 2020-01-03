@@ -1,5 +1,6 @@
 import 'package:detonados/components/AppBar.dart';
 import 'package:detonados/components/RunsableCard.dart';
+import 'package:detonados/util/Constants.dart';
 import 'package:flutter/material.dart';
 
 class ListPage extends StatefulWidget {
@@ -8,6 +9,13 @@ class ListPage extends StatefulWidget {
 }
 
 class _ListPageState extends State<ListPage> {
+  List<int> _data;
+  @override
+  void initState() {
+    super.initState();
+    _data = [ 0, 1, 2, 3];
+    print(_data.length);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +23,13 @@ class _ListPageState extends State<ListPage> {
       child: new Column(
         children: <Widget>[
           Expanded(
-            child: Row(
-              children: <Widget>[
-                Expanded(child: RunsableCard(color: Color(0xFF1D1E33))),
-                Expanded(child: RunsableCard(color: Color(0xFF1D1E33))),
-              ],
-            ),
-          )
+            child: new ListView.builder(
+              itemCount: _data.length,
+              itemBuilder: (BuildContext context , int index){
+                return RunsableCard(color: Color(COLOR_CARD));
+              },
+            )
+          ),
         ],
       ),
     );

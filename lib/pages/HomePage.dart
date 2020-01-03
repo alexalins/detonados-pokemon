@@ -25,9 +25,10 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     //CRIANDO LISTA DE ITENS PARA A NAVEGACAO
     _items = new List();
-    _items.add(new BottomNavigationBarItem(icon: new Icon(Icons.featured_play_list), title: new Text('Lista')));
+    _items.add(new BottomNavigationBarItem(icon: new Icon(Icons.list), title: new Text('Lista')));
     _items.add(new BottomNavigationBarItem(icon: new Icon(Icons.info), title: new Text('Info')));
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,6 +37,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: new  BottomNavigationBar(
         items: _items,
         fixedColor: Colors.white,
+        currentIndex: _pagSelect,
         onTap: (int item){
           setState(() {
               _pagSelect = item;
