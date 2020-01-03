@@ -24,7 +24,7 @@ class _ListPageState extends State<ListPage> {
     return Container(
       padding: EdgeInsets.all(16.0),
       child: GridView.count(
-          crossAxisCount: 2,
+          crossAxisCount: 2 ,
           children: List.generate(_data.length, (index){
             return  RunsableCard(color: Color(COLOR_CARD), detonado: _data[index]);
           },

@@ -1,4 +1,3 @@
-import 'package:detonados/components/BottomBar.dart';
 import 'package:detonados/pages/SplashPage.dart';
 import 'package:detonados/router/NavigationRouter.dart';
 import 'package:flutter/material.dart';

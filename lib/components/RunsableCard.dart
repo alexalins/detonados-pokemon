@@ -1,5 +1,4 @@
 import 'package:detonados/models/Detonado.dart';
-import 'package:detonados/util/Constants.dart';
 import 'package:flutter/material.dart';
 
 class RunsableCard extends StatelessWidget {
@@ -20,7 +19,7 @@ class RunsableCard extends StatelessWidget {
         child: Column(
               children: <Widget>[
                 Expanded(child:  Image(image: AssetImage('image/pokeball.png'))),
-                Text( detonado.titulo, style: new TextStyle(fontSize: 16))
+                Text( detonado.titulo, style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold))
               ],
             ),
         )
