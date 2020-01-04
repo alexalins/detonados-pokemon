@@ -26,7 +26,6 @@ class _InfoPageState extends State<InfoPage> {
       child: Card(
           child: Container(
               margin: EdgeInsets.all(4.0),
-              padding: EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                   color: Color(COLOR_CARD), borderRadius: BorderRadius.circular(10.0)
               ),
@@ -35,9 +34,14 @@ class _InfoPageState extends State<InfoPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 new Text('Desenvolvido por Alexa Lins', style: new TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
-                new Text('Redes Socias:', style: new TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                new FlatButton(onPressed: () => _git(), child: new Icon(Icons.link)),
-                new FlatButton(onPressed: () => _twitter(), child: new Icon(Icons.videogame_asset)),
+                new Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    new FlatButton(onPressed: () => _git(), child: new Icon(Icons.link)),
+                    new FlatButton(onPressed: () => _twitter(), child: new Icon(Icons.videogame_asset)),
+                  ],
+                ),
                 new FlatButton(onPressed: () => _pokemonMythology(), child: new Text('Dados de Pokémon Mythology', style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold)))
               ],
             ),

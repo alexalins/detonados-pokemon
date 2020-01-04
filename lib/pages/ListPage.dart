@@ -16,7 +16,6 @@ class _ListPageState extends State<ListPage> {
     super.initState();
     MockDetonados mockDetonados = new MockDetonados();
     _data = mockDetonados.detonados;
-    print(_data.length);
   }
 
   @override
