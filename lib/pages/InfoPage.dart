@@ -1,5 +1,7 @@
+import 'package:detonados/pages/DetonadoPage.dart';
 import 'package:detonados/util/Constants.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class InfoPage extends StatefulWidget {
   @override
@@ -8,16 +10,13 @@ class InfoPage extends StatefulWidget {
 
 class _InfoPageState extends State<InfoPage> {
 
-  void _git() {
-    print('https://github.com/alexalins');
-  }
-
-  void _twitter() {
-    print('https://twitter.com/alexalins');
-  }
-
-  void _pokemonMythology() {
-    print('https://pokemonmythology.com/');
+  void _webView(String link) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DetonadoPage(link: link),
+      ),
+    );
   }
 
   @override
@@ -38,11 +37,11 @@ class _InfoPageState extends State<InfoPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new FlatButton(onPressed: () => _git(), child: new Icon(Icons.link)),
-                    new FlatButton(onPressed: () => _twitter(), child: new Icon(Icons.videogame_asset)),
+                    new FlatButton(onPressed: () => _webView('https://github.com/alexalins'), child: Icon(MdiIcons.githubCircle)),
+                    new FlatButton(onPressed: () => _webView('https://twitter.com/aglinsoo'), child: Icon(MdiIcons.twitter)),
                   ],
                 ),
-                new FlatButton(onPressed: () => _pokemonMythology(), child: new Text('Dados de Pokémon Mythology', style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold)))
+                new FlatButton(onPressed: () => _webView('https://pokemythology.net/'  ), child: new Text('Dados de Pokémon Mythology', style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold)))
               ],
             ),
           )
