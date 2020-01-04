@@ -7,6 +7,8 @@ class RunsableCard extends StatelessWidget {
   final Color color;
   final Detonado detonado;
 
+
+
   @override
   Card build(BuildContext context) {
     return  Card(
@@ -18,7 +20,7 @@ class RunsableCard extends StatelessWidget {
         ),
         child: Column(
               children: <Widget>[
-                Expanded(child:  Image(image: AssetImage('image/pokeball.png'))),
+                Expanded(child:  Image(image: NetworkImage(detonado.foto))),
                 Text( detonado.titulo, style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold))
               ],
             ),
