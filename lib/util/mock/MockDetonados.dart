@@ -4,10 +4,10 @@ import '../../models/Detonado.dart';
 
 class MockDetonados {
   List<Detonado> detonados = [
-    new Detonado('Red/Blue', 'https://pokemythology.net/detonados/detonado-red-blue', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQyW2kn-JmK71OPQTLDrZ39IPrdtVVwoUhNdIL62AsbvhSdiRWq'),
-    new Detonado('Yellow', 'https://pokemythology.net/detonados/detonado-yellow', 'https://i1.wp.com/www.pokemythology.net/conteudo/imgs/midia/box_yellow.jpg?resize=100%2C100&ssl=1'),
-    new Detonado('Gold/Silver', 'https://pokemythology.net/detonados/detonado-gold-silver', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb4TqvaqOJL3qg3RgNC9dI6jpy1W_q1ikc9oi2jBTfXVaD8lAG'),
-    new Detonado('Crystal', 'https://pokemythology.net/detonados/detonado-crystal', 'https://i1.wp.com/www.pokemythology.net/conteudo/imgs/midia/box_crystal.jpg?resize=100%2C100&ssl=1'),
+    new Detonado('Red/Blue', 'https://drive.google.com/file/d/0B64wsQDxdJL8Zi1QTmVXM1M4MWM/view', 'http://1.bp.blogspot.com/-oDj_v3zmkGI/UwSWJtE15DI/AAAAAAAAA2I/uGXUurlr54Y/s1600/Pokemon-RB.jpg'),
+    new Detonado('Yellow', 'https://drive.google.com/file/d/0B64wsQDxdJL8bk1EOENBbFpHRFE/view', 'https://i1.wp.com/www.pokemythology.net/conteudo/imgs/midia/box_yellow.jpg?resize=100%2C100&ssl=1'),
+    new Detonado('Gold/Silver', 'https://drive.google.com/file/d/0B64wsQDxdJL8OHZuZEhyU1FYYU0/view', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb4TqvaqOJL3qg3RgNC9dI6jpy1W_q1ikc9oi2jBTfXVaD8lAG'),
+    new Detonado('Crystal', 'https://drive.google.com/file/d/0B64wsQDxdJL8U3FUTnI0SndjdTQ/view', 'https://i1.wp.com/www.pokemythology.net/conteudo/imgs/midia/box_crystal.jpg?resize=100%2C100&ssl=1'),
     new Detonado('Ruby/Sapphire', 'https://pokemythology.net/conteudo/detonados/detonado_rs.htm', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSx_8eLZjyssj18F6ooOMfD_WkL9o000LzOhn-dcm9IYQ_qd-Ly'),
     new Detonado('FireRed/LeafGreen', 'https://pokemythology.net/conteudo/detonados/detonado_frlg.htm', 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ7xL6vrtIwlxKrKVQaPFohj3ZsK-FDOYdIeYQtTDYsyOVKWdX'),
     new Detonado('Emerald', 'https://pokemythology.net/conteudo/detonados/detonado_e.htm', 'https://i0.wp.com/www.pokemythology.net/conteudo/imgs/midia/box_emerald.jpg?resize=100%2C100&ssl=1'),

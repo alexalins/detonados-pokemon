@@ -1,3 +1,4 @@
+import 'package:detonados/pages/DetonadoPage.dart';
 import 'package:detonados/pages/HomePage.dart';
 import 'package:detonados/pages/InfoPage.dart';
 import 'package:detonados/pages/ListPage.dart';
@@ -23,6 +24,10 @@ class NavigationRouter {
       case "/info":
         return MaterialPageRoute(
             builder: (_) => InfoPage()
+        );
+      case "/detonado":
+        return MaterialPageRoute(
+            builder: (_) => DetonadoPage()
         );
       default:
         _erroRota();
