@@ -32,7 +32,8 @@ class _InfoPageState extends State<InfoPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                new Text('Desenvolvido por Alexa Lins', style: new TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                new Text('Desenvolvido por Alexa Lins', style: new TextStyle(fontSize: 22, fontWeight: FontWeight.bold,  fontFamily: 'Soucer Sans Pro')),
+                new SizedBox( height: 20.0, width: 350.0, child: Divider(color: Colors.teal.shade100)),
                 new Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -41,7 +42,8 @@ class _InfoPageState extends State<InfoPage> {
                     new FlatButton(onPressed: () => _webView('https://twitter.com/aglinsoo'), child: Icon(MdiIcons.twitter)),
                   ],
                 ),
-                new FlatButton(onPressed: () => _webView('https://pokemythology.net/'  ), child: new Text('Dados de Pokémon Mythology', style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold)))
+                new SizedBox( height: 20.0, width: 350.0, child: Divider(color: Colors.teal.shade100)),
+                new FlatButton(onPressed: () => _webView('https://pokemythology.net/'), child: new Text('Dados de Pokémon Mythology', style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold, fontFamily: 'Soucer Sans Pro')))
               ],
             ),
           )

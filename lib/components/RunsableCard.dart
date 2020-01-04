@@ -31,7 +31,7 @@ class RunsableCard extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Expanded(child:  Image(image: NetworkImage(detonado.foto))),
-              Text( detonado.titulo, style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold))
+              Text( detonado.titulo, style: new TextStyle(fontSize: 16, fontWeight: FontWeight.bold,   fontFamily: 'Soucer Sans Pro'))
             ],
           ),
         ),

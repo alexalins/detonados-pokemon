@@ -27,3 +27,8 @@ flutter:
 
   assets:
    - image/pokeball.png
+
+  fonts:
+  - family: Source Sans Pro
+    fonts:
+    - asset: fonts/SourceSansPro-Regular.ttf
